@@ -307,7 +307,7 @@ Phaser.Text.prototype.updateText = function () {
 
     //calculate text width
     var lineWidths = [];
-    var maxLineWidth = 0;
+    var maxLineWidth = this.style.wordWrap ? this.style.wordWrapWidth : 0;
     var fontProperties = this.determineFontProperties(this.style.font);
 
     for (var i = 0; i < lines.length; i++)
